@@ -1,0 +1,65 @@
+.transaction-list-container {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .list-group-item {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+    background-color: #fff;
+  }
+  
+  .transaction-info > div {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Indicator Styles */
+  .deposit {
+    color: #28a745; /* Green for deposits */
+  }
+  
+  .withdraw {
+    color: #dc3545; /* Red for withdrawals */
+  }
+  
+  .transfer {
+    color: #007bff; /* Blue for transfers */
+  }
+  
+  .received {
+    color: #17a2b8; /* Teal for money received */
+  }
+  
+  .card-header {
+    background-color: #f8f9fa; /* Light grey background */
+    border-bottom: 1px solid #e2e5e9; /* Subtle border for separation */
+  }
+  
+  .card-body {
+    background-color: #ffffff; /* White background for the body */
+  }
+  
+  .list-group-item {
+    border: none; /* Remove borders between items for a cleaner look */
+    padding: 10px;
+    margin-bottom: 5px; /* Space between items */
+    background-color: #f8f9fa; /* Slightly grey to differentiate from the card body */
+  }
+  
+  .transaction-info > div {
+    margin-bottom: 5px; /* Space between transaction details */
+  }
+  
+  .btn-outline-secondary {
+    color: #6c757d; /* Dark gray color for the button */
+    border-color: #6c757d;
+  }
+  
+  .btn-outline-secondary:hover {
+    color: #ffffff; /* White text on hover */
+    background-color: #6c757d; /* Darker background on hover */
+    border-color: #6c757d;
+  }
+  

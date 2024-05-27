@@ -1,0 +1,23 @@
+<app-nav></app-nav>
+<div class="container mt-5 p-3">
+    <h2>Profile Information</h2>
+    <div class="card mb-3">
+      <div class="card-header">Customer Details</div>
+      <div class="card-body">
+        <p><strong>Name:</strong> {{ customer.firstName }} {{ customer.lastName }}</p>
+        <p><strong>Date of Birth:</strong> {{ customer.dateOfBirth | date:'mediumDate' }}</p>
+        <p><strong>Email:</strong> {{ customer.email }}</p>
+        <p><strong>Phone:</strong> {{ customer.phoneNumber }}</p>
+        <p><strong>Address:</strong> {{ customer.address }}</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">Account Details</div>
+      <div class="card-body">
+        <p><strong>Account ID:</strong> {{ account.accountId }}</p>
+        <p><strong>Account Type:</strong> {{ account.accountType }}</p>
+        <p><strong>Date Opened:</strong> {{ account.dateOpened | date:'mediumDate' }}</p>
+      </div>
+    </div>
+    <button class="btn btn-danger mt-3" (click)="authService.logout()">Logout</button>
+</div>

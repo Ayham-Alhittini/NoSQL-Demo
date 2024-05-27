@@ -1,0 +1,29 @@
+<div class="container position-absolute top-50 start-50 translate-middle">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h2>Login</h2>
+          </div>
+          <div class="card-body">
+            <form (ngSubmit)="login()" autocomplete="off">
+              <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" name="username" [(ngModel)]="loginDto.username" required>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" [(ngModel)]="loginDto.password" required>
+              </div>
+              <div class="d-flex">
+                <button type="submit" class="btn btn-primary me-3">Login</button>
+                <div class="mt-4">
+                    Not registered yet? <a routerLink="/auth/register" style="color: #5bc0de;">Create an account</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

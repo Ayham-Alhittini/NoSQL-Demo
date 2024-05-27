@@ -1,0 +1,34 @@
+<app-nav></app-nav>
+
+<div class="container mt-5">
+    <div class="jumbotron bg-light p-5 rounded">
+      <h1 class="display-4">Hello, {{ user.username }}!</h1>
+      <p class="lead">Here's a quick look at your current balance:</p>
+      <h3>${{ userBalance | number }}</h3>
+      <hr class="my-4">
+  
+      <p class="lead">Manage your account:</p>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <i class="fa-solid fa-piggy-bank fa-3x mb-3"></i>
+              <h5 class="card-title">Transactions</h5>
+              <p class="card-text">Deposit, withdraw, or transfer funds.</p>
+              <a routerLink="/transactions" class="btn btn-primary">Go to Transactions</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <i class="fa-solid fa-hand-holding-dollar fa-3x mb-3"></i>
+              <h5 class="card-title">Loans</h5>
+              <p class="card-text">Apply for a new loan or manage existing loans.</p>
+              <a routerLink="/loans" class="btn btn-primary">Manage Loans</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

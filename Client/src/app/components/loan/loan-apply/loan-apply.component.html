@@ -1,0 +1,45 @@
+<div class="container position-absolute top-50 start-50 translate-middle">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow">
+        <div class="card-header">
+          <h2>Apply for a new loan</h2>
+        </div>
+        <div class="card-body">
+
+          <form (ngSubmit)="applyForLoan()">
+            <div class="mb-3">
+              <label for="loanAmount" class="form-label">Loan Amount</label>
+              <input type="number" class="form-control" name="loanAmount" [(ngModel)]="newLoan.loanAmount" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="loanDuration" class="form-label">Loan Duration (Years)</label>
+              <input type="number" class="form-control" name="loanDuration" [(ngModel)]="newLoan.loanDuration" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="loanType" class="form-label">Loan Type</label>
+              <select class="form-select" id="loanType" [(ngModel)]="newLoan.loanType" name="loanType" required>
+                <option value="PERSONAL">Personal</option>
+                <option value="MORTGAGE">Mortagge</option>
+                <option value="STUDENT">Student</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="interestRate" class="form-label">Interest Rate (%)</label>
+              <input type="number" class="form-control" name="interestRate" value="6" disabled>
+            </div>
+
+            <button type="submit" class="btn btn-primary"
+            [disabled]="newLoan.loanAmount <= 0 || newLoan.loanDuration <= 0"
+            >Apply</button>
+            <button type="button" class="btn btn-secondary ms-1" (click)="closeModel()">Cancel</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

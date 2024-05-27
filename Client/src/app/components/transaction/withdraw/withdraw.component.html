@@ -1,0 +1,21 @@
+<div class="container position-absolute top-50 start-50 translate-middle" style="max-width: 600px">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow"> 
+        <div class="card-header">
+          <h2>Withdraw Funds</h2>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label for="withdrawAmount" class="form-label">Amount</label>
+              <input type="number" class="form-control" name="withdrawAmount" [(ngModel)]="amount" required>
+            </div>
+            <button type="submit" class="btn btn-warning" [disabled]="amount <= 0">Withdraw</button>
+            <button type="button" class="btn btn-secondary ms-1" (click)="closeModel()">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

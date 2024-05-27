@@ -1,0 +1,28 @@
+<app-nav></app-nav>
+<div class="container mt-5 p-3">
+  <h2 class="mb-4">Your Loans</h2>
+<div class="list-group mb-5">
+  <a *ngFor="let loan of loans; let i = index" class="list-group-item list-group-item-action mb-3 shadow">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Loan ID: {{ loan.loanId }}</h5>
+      <small class="text-muted">{{ loan.startDate | date:'longDate' }}</small>
+    </div>
+    <p class="mb-1"><strong>Type:</strong> {{ loan.loanType }}</p>
+    <p class="mb-1">Amount: <strong>${{ loan.loanAmount | number }}</strong> at <strong>{{ loan.interestRate | number:'1.2-2' }}%</strong> Interest</p>
+    <p class="mb-1">Duration: <strong>{{ loan.loanDuration }} years</strong></p>
+    <p class="mb-1">Total Loan Amount: <strong>${{ loan.totalLoanAmount | number }}</strong></p>
+    <p class="mb-1">Yearly Payment: <strong>${{ loan.yearlyPayment | number }}</strong></p>
+    <p>Monthly Payment: <strong>${{ loan.monthlyPayment | number }}</strong></p>
+  </a>
+</div>
+<div class="alert alert-info" role="alert">
+  <strong>Total Debit:</strong> ${{ totalDebit | number }}
+</div>
+
+  
+    
+    <hr>
+
+    <button class="btn btn-primary" routerLink="/loans/apply" >Apply for a New Loan</button>
+    <router-outlet></router-outlet>
+  </div>

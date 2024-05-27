@@ -1,0 +1,32 @@
+.nav-link .badge {
+    position: absolute; /* Adjust positioning over the icon */
+    top: -5px; /* Adjust to fit visual balance */
+    right: -5px; /* Adjust to fit visual balance */
+    padding: 0.25em 0.6em; /* Smaller badge */
+    border-radius: 50%; /* Circular shape */
+    font-size: 0.75rem; /* Smaller font size for numbers */
+    line-height: 1; /* Adjust line height to align text center */
+  }
+  
+  .fa-bell {
+    font-size: 1.5em; /* Larger icon */
+  }
+  .dropdown-menu {
+    max-width: 350px; /* Set a reasonable max-width */
+    padding: 10px; /* Padding around items for better readability */
+    overflow-y: auto; /* Allows scrolling */
+    background: #f8f9fa; /* Light background for better contrast */
+  }
+  
+  .notification-message:hover {
+    max-height: none; /* Allows full text to be seen on hover */
+  }
+
+  .notification-message {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  

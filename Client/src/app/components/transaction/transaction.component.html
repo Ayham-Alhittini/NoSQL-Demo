@@ -1,0 +1,45 @@
+<app-nav ></app-nav>
+
+<div class="container mt-5 p-3">
+  <h2 class="mb-4">Transaction Services</h2>
+  <div class="row">
+      <div class="col-md-3 mb-4">
+          <div class="card">
+              <div class="card-body text-center">
+                  <i class="fa-solid fa-arrow-down fa-3x mb-3"></i>
+                  <h5 class="card-title">Deposit</h5>
+                  <a class="btn btn-success" routerLink="/transactions/deposit">Make a Deposit</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3 mb-4">
+          <div class="card">
+              <div class="card-body text-center">
+                  <i class="fa-solid fa-arrow-up fa-3x mb-3"></i>
+                  <h5 class="card-title">Withdraw</h5>
+                  <a class="btn btn-warning" routerLink="/transactions/withdraw">Make a Withdrawal</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3 mb-4">
+          <div class="card">
+              <div class="card-body text-center">
+                  <i class="fa-solid fa-exchange-alt fa-3x mb-3"></i>
+                  <h5 class="card-title">Transfer</h5>
+                  <a class="btn btn-primary" routerLink="/transactions/transfer">Make a Transfer</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3 mb-4">
+          <div class="card">
+              <div class="card-body text-center">
+                  <i class="fa-solid fa-history fa-3x mb-3"></i>
+                  <h5 class="card-title">Transaction History</h5>
+                  <a class="btn btn-info" routerLink="/transactions/history">View History</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

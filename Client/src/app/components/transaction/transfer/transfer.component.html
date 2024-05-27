@@ -1,0 +1,27 @@
+<div class="container position-absolute top-50 start-50 translate-middle" style="max-width: 600px">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow">
+        <div class="card-header">
+          <h2>Transfer Funds</h2>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label for="transferAmount" class="form-label">Amount</label>
+              <input type="number" class="form-control" name="transferAmount" [(ngModel)]="transfer.transferAmount" required>
+            </div>
+            <div class="mb-3">
+              <label for="destinationAccountId" class="form-label">Destination Account ID</label>
+              <input type="text" placeholder="destination account id" class="form-control" name="destinationAccountId" [(ngModel)]="transfer.destinationAccountId" required>
+            </div>
+            <button type="submit" class="btn btn-primary"
+            [disabled]="transfer.transferAmount <= 0 || transfer.destinationAccountId.trim() === ''"
+              >Transfer</button>
+            <button type="button" class="btn btn-secondary ms-2" (click)="closeModel()">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

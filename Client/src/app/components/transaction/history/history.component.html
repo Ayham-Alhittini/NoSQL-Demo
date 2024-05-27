@@ -1,0 +1,26 @@
+<div class="container position-absolute top-50 start-50 translate-middle" style="max-width: 600px;">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <div class="card shadow">
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <h2 class="text-center flex-grow-1">Transaction History</h2>
+            <button class="btn btn-outline-secondary" (click)="closeHistory()">Close</button>
+          </div>
+          <div class="card-body" style="max-height: 500px; overflow-y: auto;">
+            <div *ngFor="let transaction of transactions" class="list-group-item">
+                <div class="transaction-info">
+                  <div>ID: {{ transaction.transactionId }}</div>
+                  <div>Date: {{ transaction.transactionDate | date:'medium' }}</div>
+                  <div>Type: <strong>{{ capitalizeWords(transaction.transactionType) }}</strong></div>
+                  <div>Amount: <span [class]="getTransactionClass(transaction)">{{ formatAmount(transaction) }}</span></div>
+                  <p class="mb-1" *ngIf="transaction.transactionType === 'TRANSFER'">
+                    From: {{ transaction.accountId === user.accountId ? 'You' : transaction.accountId }} 
+                    To: {{ transaction.accountId === user.accountId ? transaction.destinationAccountId : 'You' }}
+                  </p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
